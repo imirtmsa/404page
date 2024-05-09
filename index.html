@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access Denied</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url("background.png"); /* Replace with your image filename */
+      background-repeat: no-repeat;  /* Prevents image tiling */
+      background-position: center;  /* Centers the background image */
+      background-size: cover;       /* Covers the entire viewport */
+      opacity: 0.7;                   /* Sets background image opacity to 30% (1 - 0.7 = 0.3) */
+    }
+
+    .message-container {
+      text-align: center;
+      padding: 50px;
+      border-radius: 10px;
+      background-color: #fff; /* Ensures content background is white */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .message-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2); /* Subtle white overlay */
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0% 80%);  /* Creates a polygon shape */
+    }
+
+    .message-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #222;
+      font-weight: bold;
+    }
+
+    .message-text {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .contact-info {
+      margin-top: 0; /* Remove top margin for better flow */
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <h2 class="message-title">You are Not Authorized to Access This Website</h2>
+    <p class="message-text">Looks like you've stumbled upon a restricted area. Unfortunately, you don't have permission to view this page. 
+      If you believe you should have access, please contact the website administrator at:</p>
+    <p class="contact-info">
+      <a href="mailto:hello@example.com">hello@example.com</a>
+    </p>
+  </div>
+</body>
+</html>
